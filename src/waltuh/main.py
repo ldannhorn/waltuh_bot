@@ -10,6 +10,7 @@ from random import choice
 from pathlib import Path
 from typing import Any
 import json
+import os
 
 
 intents = discord.Intents.default()
@@ -55,6 +56,8 @@ async def on_ready():
         message: str = choice(content.get('rand_daily', ['waltuh ist kaputt :c']))
         print(message)
         await channel.send(message)
+
+    os._exit(0)
         
 
 
